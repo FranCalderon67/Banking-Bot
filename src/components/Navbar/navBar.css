@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.navLogo {
+  margin-top: 1rem;
+  margin-left: 25%;
+  height: 50px;
+  width: 50px;
+  color: red;
+}
