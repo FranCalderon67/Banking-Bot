@@ -1,7 +1,6 @@
 .flexContainer {
   display: flex;
   flex-direction: row;
-
   margin-top: 1.5rem;
   text-align: center;
   margin-left: 27%;

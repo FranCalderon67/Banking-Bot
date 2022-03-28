@@ -1,0 +1,59 @@
+.bodyFlex {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1.5rem;
+  width: 900px;
+  margin-left: 27%;
+  background-color: rgb(196, 196, 196);
+  border-radius: 1rem;
+  align-content: center;
+}
+
+.bodyFlex_content {
+  margin-left: 3rem;
+}
+
+.cardFlex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.cardOne {
+  background-image: url("https://us.123rf.com/450wm/vadymvdrobot/vadymvdrobot1904/vadymvdrobot190402413/121241876-sonriente-joven-sentado-en-un-sof%C3%A1-en-casa-mediante-tel%C3%A9fono-m%C3%B3vil.jpg?ver=6");
+  background-repeat: no-repeat;
+  width: 450px;
+  height: 300px;
+  border-radius: 1rem;
+  margin-right: 2rem;
+  transition: transform 2s;
+  margin-top: 2rem;
+}
+
+.cardTwo {
+  background-image: url("https://blueandgreentomorrow.com/wp-content/uploads/2019/03/implementing-eco-friendly-solutions.jpg");
+  background-repeat: no-repeat;
+  width: 450px;
+  height: 300px;
+  border-radius: 1rem;
+  margin-left: 2rem;
+  transition: transform 2s;
+  margin-top: 2rem;
+}
+
+.cardOne:hover,
+.cardTwo:hover {
+  transform: translate(-10px, -10px);
+  box-shadow: 5px 10px 8px #888888;
+}
+
+.card-content_title {
+  margin-top: 12rem;
+  margin-left: 0.5rem;
+  font-weight: 700;
+}
+
+.card-content_text {
+  margin-left: 0.5rem;
+  font-weight: 700;
+}
