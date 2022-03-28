@@ -19,14 +19,14 @@ function Carousel() {
           </div>
           <div className="carousel-item">
             <img src="https://www.tooltyp.com/wp-content/uploads/2019/01/1900x920-como-y-por-que-hacer-descuentos-en-tu-ecommerce.jpg" className="d-block w-100 carousel_img" alt="..."></img>
-            <div className="carousel-caption d-none d-md-block">
+            <div className="carousel-caption d-none d-md-block carousel-text">
               <h5>Zona de beneficios</h5>
               <p>Sumate a nosotros y obtene increible beneficios en tiendas.</p>
             </div>
           </div>
           <div className="carousel-item">
             <img src="https://s1.eestatic.com/2020/07/06/actualidad/actualidad_503210424_155198864_1024x576.jpg" className="d-block w-100 carousel_img" alt="..."></img>
-            <div className="carousel-caption d-none d-md-block">
+            <div className="carousel-caption d-none d-md-block carousel-text">
               <h5>Inversiones</h5>
               <p>Trabajamos con una cartera de inversiones sostenibles y "eco friendly".</p>
             </div>

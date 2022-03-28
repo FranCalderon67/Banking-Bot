@@ -39,17 +39,21 @@ ul {
 .contactLogo {
   margin-top: 0.5rem;
   margin-left: 0.5rem;
-  height: 40px;
-  width: 40px;
 }
 
 .wLogo {
   color: green;
+  height: 40px;
+  width: 40px;
 }
 .linkedLogo {
   color: blue;
+  height: 45px;
+  width: 45px;
 }
 
 .mailLogo {
   color: red;
+  height: 50px;
+  width: 50px;
 }
