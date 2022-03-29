@@ -1,12 +1,18 @@
-import NavBar from "./components/Navbar/NavBar";
+import React from "react";
 import Home from "./components/Home/Home";
+import LogInForm from "./components/LogIn/LogInForm/LogInForm";
 import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <>
-      <NavBar />
-      <Home />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<LogInForm />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }

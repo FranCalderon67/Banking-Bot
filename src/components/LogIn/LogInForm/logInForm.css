@@ -1,0 +1,87 @@
+.formLogo {
+  margin-top: 1rem;
+  margin-left: 3rem;
+  height: 50px;
+  width: 50px;
+  color: red;
+}
+
+.formDisplay {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.form-ingreso {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-content: center;
+  align-items: flex-start;
+  margin-top: 12rem;
+  margin-left: 20rem;
+}
+
+.form-ingreso-usuario {
+  font-size: 20px;
+  margin: 1rem 0 2rem 0;
+  border: unset;
+  border-bottom: solid 2px red;
+  outline: none;
+}
+
+.form-ingreso-pin {
+  font-size: 20px;
+  margin: 1rem 0 2rem 0;
+  border: unset;
+  border-bottom: solid 2px red;
+  outline: none;
+}
+
+.form-ingreso-boton {
+  min-width: 130px;
+  height: 40px;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  background: red;
+  z-index: 1;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  margin: 1rem 0 2rem 0;
+  margin-left: 3.5rem;
+}
+.form-ingreso-boton:hover:after {
+  width: 100%;
+  left: 0;
+}
+.form-ingreso-boton:after {
+  border-radius: 5px;
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  z-index: -1;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  background-color: #979797;
+  right: 0;
+}
+.form-ingreso-boton:active {
+  top: 2px;
+}
+
+.formImg {
+  height: 800px;
+  margin-top: 4rem;
+  margin-right: 10rem;
+}
