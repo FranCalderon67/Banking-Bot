@@ -24,7 +24,7 @@ function LogInForm() {
       .finally(() => {
         setLoading(false);
       });
-  }, []);
+  });
 
   return (
     <>
