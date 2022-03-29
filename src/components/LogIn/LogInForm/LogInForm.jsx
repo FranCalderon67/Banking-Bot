@@ -1,9 +1,31 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./logInForm.css";
 import { SiWebmoney } from "react-icons/si";
 import { Link } from "react-router-dom";
 
 function LogInForm() {
+  const [image, setImage] = useState();
+  const [loading, setLoading] = useState(true);
+
+  const promiseMock = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("https://picsum.photos/900");
+    }, 1500);
+  });
+
+  useEffect(() => {
+    promiseMock
+      .then((res) => {
+        setImage(res);
+      })
+      .catch((error) => {
+        console.log("error=>", error);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  }, []);
+
   return (
     <>
       <SiWebmoney className="formLogo" />
@@ -20,9 +42,7 @@ function LogInForm() {
             </Link>
           </form>
         </div>
-        <div>
-          <img className="formImg" src={"https://picsum.photos/900"} alt="ERROR" />
-        </div>
+        <div>{loading ? <div className="spinner-grow text-danger loadingPosition" role="status"></div> : <img className="formImg" src={image} alt="ERROR" />}</div>
       </div>
     </>
   );
