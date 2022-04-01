@@ -1,14 +1,17 @@
 import React from "react";
 import "./options.css";
+import { Link } from "react-router-dom";
 
 function Options() {
   return (
     <>
       <div className="flexContainer">
-        <div className="card">
-          <img className="flexImg" src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNn98TntIn-jYjPbUemCKcYDbN9woY0IxUrA&usqp=CAU"} alt="ERROR" />
-          <div>Registrate</div>
-        </div>
+        <Link to="/signup">
+          <div className="card">
+            <img className="flexImg" src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNn98TntIn-jYjPbUemCKcYDbN9woY0IxUrA&usqp=CAU"} alt="ERROR" />
+            <div>Registrate</div>
+          </div>
+        </Link>
         <div className="card">
           <img className="flexImg" src={"https://images4.content-hci.com/commimg/myhotcourses/blog/post/myhc_63466_255px.jpg"} alt="ERROR" />
           <div>Resuelve tus dudas</div>

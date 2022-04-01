@@ -1,0 +1,23 @@
+.flex_display {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.flex_form {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  margin-left: 20rem;
+  margin-top: 5rem;
+}
+
+.form_item {
+  margin-bottom: 1rem;
+  width: 25rem;
+}
+
+.errorMsg {
+  color: orangered;
+  z-index: 5;
+}
