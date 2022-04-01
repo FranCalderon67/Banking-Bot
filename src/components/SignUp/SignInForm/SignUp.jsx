@@ -4,6 +4,9 @@ import { ErrorMessage } from "@hookform/error-message";
 import "./signUp.css";
 import { SiWebmoney } from "react-icons/si";
 import { Link } from "react-router-dom";
+import { collection, Timestamp, addDoc } from "firebase/firestore";
+import db from "../../../services/firebase";
+import swal from "sweetalert";
 
 function SignUp() {
   const {
@@ -34,7 +37,7 @@ function SignUp() {
       });
   });
 
-  const sendData = (e) => {
+  const sendData = async (e) => {
     let newUser;
     newUser = {
       name: e.firstName,
@@ -45,9 +48,17 @@ function SignUp() {
       phoneNumber: e.phone,
       user: e.user,
       password: e.password,
+      count: Math.floor(Math.random() * 9000000000) + 1000000000,
+      date: Timestamp.fromDate(new Date()),
     };
 
-    console.log(newUser);
+    const userCollection = collection(db, "users");
+    try {
+      const newDoc = await addDoc(userCollection, newUser);
+      swal("Ha sido creador el usuario para:", `${newUser.fullName}`, "success");
+    } catch (error) {
+      console.log("error=>", error);
+    }
   };
 
   return (
@@ -156,11 +167,14 @@ function SignUp() {
           <div className="errorMsg">
             <ErrorMessage errors={errors} name="password" />
           </div>
-
-          <button type="submit">Aceptar</button>
-          <Link to="/">
-            <button style={{ width: "25rem" }}>Cancelar</button>
-          </Link>
+          <div>
+            <button className="form-ingreso-boton" type="submit">
+              Aceptar
+            </button>
+            <Link to="/">
+              <button className="form-ingreso-boton">Cancelar</button>
+            </Link>
+          </div>
         </form>
         <div>{loading ? <div className="spinner-grow text-danger loadingPosition" role="status"></div> : <img className="formImg" src={image} alt="ERROR" />}</div>
       </div>
